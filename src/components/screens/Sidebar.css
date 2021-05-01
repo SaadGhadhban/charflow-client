@@ -1,0 +1,115 @@
+.side-link-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #293744;
+    height: 100%;
+    
+    
+}
+
+.side-link-item {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: rgb(214, 214, 214); 
+    height:fit-content;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.side-link-item:hover {
+    background-color: #242f3a;
+}
+.nav-header {
+    background-color: transparent;
+    font-size: small;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: rgb(214, 214, 214); 
+    font-size: 15px;
+    cursor: pointer;
+}
+.nav-header:focus {
+    outline: 0;
+}
+
+.nav-arrow {
+    margin-top: 2px;
+}
+
+.sidebar-container {
+    background-color:#2e3e4e;
+    color:rgb(214, 214, 214);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 700px;
+    width: 200px;
+    height: auto;
+}
+
+.nav-container {
+    background-color: #293744;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    
+    transition: 0.5s ease-in-out;
+}
+
+.active-link{
+    height: 200px;
+}
+
+.link-icon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(42,157,143);
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 3px #293744;
+    transition: 0.4s ease-in-out;
+}
+.link-icon-div p {
+    font-size: 22px;
+}
+
+.link-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(214, 214, 214);
+    margin-top: 16px;
+    transition: 0.5s ease-in-out;
+}
+.sidebar-nav-icons{
+    display: flex;
+    flex-direction: column;
+}
+
+.link-icon:hover {
+    color: white;
+}
+
+.link-icon:hover .link-icon-div {
+    width: 75px;
+    height: 75px;
+    
+    border: 5px solid #293744;
+}
+
+.add-chart-icon {
+    background-color: #e76f51;
+}
+.sign-up-icon {
+    background-color: #65a083;
+}
+
+.info-icon {
+    background-color: #d1ab4c;
+}

@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(17, 29, 39);
+}
+
+
+
+.main-input {
+    display: none;
+}
+.data-input {
+    display: none;
+}
+.active-main {
+    display: block;
+}
+
+.Barcharts {
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0;
+    
+}
+
+.pieChart {
+    display: flex;
+    
+    height: 220px;
+    width: 300px;
+   
+    transition: 0.6s ease-in-out;
+}
+
+.chart-c {
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    width: 320px;
+    margin: 30px;
+    background-color: rgba(17, 29, 39,0);
+    border-radius: 10px;
+     background-color: rgb(240, 240, 240);
+     transition: 1s ease-in-out;
+    
+}
+
+.expand {
+    position:relative;
+    height: 500px;
+    width: 950px;
+    
+}
+
+.expand-two {
+    height: 350px;
+    width: 880px;
+    
+}
+
+.chart-l {
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    width: 700px;
+    
+}
+
+.line-chart {
+    display: flex;
+    
+    height: 400px;
+    width: 700px;
+   
+}
+
+.bar-chart {
+    display: flex;
+    
+    height: 400px;
+    width: 500px;
+   
+}
+.chart-b {
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    width: 500px;
+    
+}
+
+
+
+.futter-icon {
+    color: rgb(151, 151, 151);
+    margin-right: 10px;
+    margin-left: 10px;
+}
