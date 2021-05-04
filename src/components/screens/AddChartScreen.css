@@ -190,10 +190,22 @@ body {
     margin: 0;
     
 }
+.checkbox {
+    width: 55px;
+}
+.icon-addchart {
+    margin-right: 10px ;
+}
+.cond {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: oblique;
+    color: #ebebeb;
+}
 
 .pieChart {
     display: flex;
-     
+     position: relative;
     height: 220px;
     width: 300px;
    

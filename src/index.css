@@ -329,19 +329,23 @@ textarea:focus {
 @media (max-width: 650px) { 
 
   .app {
-    width: 99%;
+    width: 100%;
   }
   .main-container {
     flex-direction: column-reverse;
-    width: 99%;
+    width: 100%;
     
     
+  }
+  .btn-container{
+    display: none;
   }
   .nav-header {
     display: none;
   }
   .sidebar-container {
     position: sticky;
+    z-index: 1000;
     bottom: 0px;
     height: 80px;
     min-height: 80px;
@@ -360,7 +364,7 @@ textarea:focus {
   .sidebar-nav-icons {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
     height: 100%;
     margin-left: 5px ;
@@ -368,7 +372,7 @@ textarea:focus {
     
   }
   .link-icon {
-    margin: 0px 18px 0px 18px;
+    margin: auto 12px auto 12px;
     position: relative;
 
   }
@@ -383,6 +387,7 @@ textarea:focus {
   }
   .header-main-container {
     position: sticky;
+    z-index: 1000;
     top: 0px;
   }
 
@@ -426,6 +431,7 @@ textarea:focus {
   }
   .active-main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
@@ -451,9 +457,37 @@ textarea:focus {
   .contact-form-container {
     width: 95%;
   }
+  .addchart-title {
+    margin:0px;
+  }
+  .addchart-title > h2 {
+    font-size: 14px;
+    font-weight: normal;
+  }
 }
 .test {
   width: 100px;
   height: 100px;
   background-color: #333;
+}
+
+ .form-group .checkbox {
+  width: 100px;
+  height: 15px;
+  border-radius: 0px;
+  background-color: #e76f51;
+  justify-self:end;
+}
+
+.checkbox-container{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(184, 184, 184,0.5);
+  margin-bottom: 15px;
+}
+.number-of-labels{
+  margin-bottom: 20px;
+}
+.checkbox:checked {
+  background: #e76f51;
 }
