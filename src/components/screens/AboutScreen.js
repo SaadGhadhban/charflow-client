@@ -2,6 +2,7 @@ import React from "react";
 import "./AboutScreen.css";
 import { Link } from "react-router-dom";
 import img from "../../svg/data-il.svg";
+import { AiFillGithub } from "react-icons/ai";
 
 function AboutScreen() {
   return (
@@ -21,13 +22,14 @@ function AboutScreen() {
           <p className="about-para">
             This website was developed by Saad Alghadhban in 2021,as a part of
             the Developer portfolio, the technologies that were used to create
-            the website are</p>
-            <ul className="about-list">
-              <li>NodeJS-ExpressJS (for back-end)</li>
-              <li>MongoDB Database</li>
-              <li>ReactJS (for front-end)</li>
-            </ul>
-          
+            the website are
+          </p>
+          <ul className="about-list">
+            <li>NodeJS-ExpressJS (for back-end)</li>
+            <li>MongoDB Database</li>
+            <li>ReactJS (for front-end)</li>
+          </ul>
+
           <h3 className="about-subtitle"> User Security</h3>
           <p className="about-para">
             Your data is secured with ChartFlow, we use bcrypt hashing
@@ -37,6 +39,9 @@ function AboutScreen() {
           <Link to="/contact" className="contact-dev">
             Contact the Developer
           </Link>
+          <a href="https://github.com/SaadGhadhban">
+            <AiFillGithub />
+          </a>
         </div>
 
         <div className="about-section-two">
