@@ -7,8 +7,7 @@ import DashboardRoute from './components/routing/DashboardRoute';
 //screens 
 import Sidebar from './components/screens/Sidebar'
 import HeaderScreen from './components/screens/HeaderScreen';
-import MainScreen from './components/screens/MainScreen';
-import PrivateScreen from './components/screens/PrivateScreen.js';
+import MainScreen from "./components/screens/MainScreen";
 import ContactScreen from './components/screens/ContactScreen';
 import RegisterScreen from './components/screens/RegisterScreen';
 import ForgotPasswordScreen from './components/screens/ForgotPasswordScreen';
@@ -22,40 +21,47 @@ const App = () =>{
 
   
   return (
-      <Router>
-        
-        
-        <div className="app">
-          
-            
-            
-           
-          <Switch>
-            <AppProvider>
+    <Router>
+      <div className="app">
+        <Switch>
+          <AppProvider>
             <HeaderScreen />
-            <div className='main-container'>
-            <div className='sidebar-container'>
-            <Sidebar />
+            <div className="main-container">
+              <div className="sidebar-container">
+                <Sidebar />
+              </div>
+
+              <DashboardRoute
+                exact
+                path="/dashboard"
+                component={DashboardScreen}
+              />
+              <DashboardRoute
+                exact
+                path="/addChart"
+                component={AddChartScreen}
+              />
+
+              <Route exact path="/" component={MainScreen} />
+              <Route exact path="/login" component={RegisterScreen} />
+              <Route exact path="/register" component={RegisterScreen} />
+              <Route
+                exact
+                path="/forgotpassword"
+                component={ForgotPasswordScreen}
+              />
+              <Route
+                exact
+                path="/resetpassword/:resetToken"
+                component={ResetPasswordScreen}
+              />
+              <Route exact path="/contact" component={ContactScreen} />
+              <Route exact path="/about" component={AboutScreen} />
             </div>
-            <PrivateRoute exact path='/private' component={PrivateScreen} />
-            <DashboardRoute exact path='/dashboard' component={DashboardScreen} />
-            <DashboardRoute exact path='/addChart' component={AddChartScreen} />
-            
-            <Route exact path='/' component={MainScreen} />
-            <Route exact path='/login' component={RegisterScreen}/>
-            <Route exact path='/register' component={RegisterScreen}/>
-            <Route exact path='/forgotpassword' component={ForgotPasswordScreen}/>
-            <Route exact path='/resetpassword/:resetToken' component={ResetPasswordScreen}/>
-            <Route exact path='/contact' component={ContactScreen}/>
-            <Route exact path='/about' component={AboutScreen} />
-            </div>
-            </AppProvider>
-          </Switch>
-          
-          </div>
-          
-      </Router>
-    
+          </AppProvider>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

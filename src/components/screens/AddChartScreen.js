@@ -81,6 +81,8 @@ const AddChartScreen = ({ history }) => {
       setError("Number of Datasets should be 20 or less");
     } else if (chartType.length < 1) {
       setError("Please select chart type");
+    } else if (numberOfDatasets < 2) {
+      setError("Number of Labels should be more than 2");
     } else {
       setNext(!next);
     }

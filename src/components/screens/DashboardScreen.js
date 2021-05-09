@@ -1,7 +1,6 @@
 import { useState, useEffect, memo } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
 import "./DashboardScreen.css";
 import { v4 as uuidv4, v4 } from "uuid";
 import { useUserContext } from "../../UserContext";
@@ -15,7 +14,7 @@ import { IoEarth } from "react-icons/io5";
 import Pagination from "./Pagination";
 
 const MainScreen = ({ history }) => {
-  const { error, setError, privateData, setPrivateData } = useUserContext();
+  const { setError, privateData, setPrivateData } = useUserContext();
 
   const [dataList, setDataList] = useState([]);
   const [lineCharts, setLineCharts] = useState([]);
@@ -34,6 +33,12 @@ const MainScreen = ({ history }) => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = dataList.slice(indexOfFirstPost, indexOfLastPost);
+  const totalCharts =
+    lineCharts.length +
+    barCharts.length +
+    doughnutCharts.length +
+    radarCharts.length +
+    polarCharts.length;
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -125,11 +130,28 @@ const MainScreen = ({ history }) => {
     fetchData();
   }, [numberOfData]);
 
-  const handleLogout = () => {
-    localStorage.removeItem("authToken");
-    history.push("/");
-  };
+  const chartDelete = (id, chart) => {
+    const fetchData = async () => {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+        },
+      };
 
+      try {
+        const { data } = await axios.patch(
+          "/api/private/deletecharts",
+          { id, chart },
+          config
+        );
+        console.log(data.data.msg);
+      } catch (error) {
+        setError("something went wrong");
+      }
+    };
+    fetchData();
+  };
   return (
     <div className="main">
       <div className="main-nav-container">
@@ -190,7 +212,7 @@ const MainScreen = ({ history }) => {
       <div className="charts-wrapper">
         {chartFilter
           ? dataList.map((item, j) => {
-              const { data, description, chartType } = item;
+              const { data, description, chartType, _id } = item;
               const isPrivate = item.private;
               const { datasets, labels, title } = data;
               return chartType.map((chart, i) => {
@@ -310,6 +332,13 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
+                        
                       </div>
                     </div>
                   );
@@ -429,6 +458,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -530,6 +565,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -651,6 +692,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -772,6 +819,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -790,7 +843,7 @@ const MainScreen = ({ history }) => {
                  > */}
         {dataList && !chartFilter
           ? currentPosts.map((item, j) => {
-              const { data, description, chartType } = item;
+              const { data, description, chartType, _id } = item;
               const isPrivate = item.private;
               const { datasets, labels, title } = data;
               return chartType.map((chart, i) => {
@@ -909,6 +962,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -1028,6 +1087,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -1129,6 +1194,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -1250,6 +1321,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -1371,6 +1448,12 @@ const MainScreen = ({ history }) => {
                         ) : (
                           <IoEarth className="futter-icon" />
                         )}
+                        <div
+                          className="delete-button"
+                          onClick={() => chartDelete(_id, chart)}
+                        >
+                          <a href="/dashboard">X</a>
+                        </div>
                       </div>
                     </div>
                   );
@@ -1378,14 +1461,26 @@ const MainScreen = ({ history }) => {
               });
             })
           : ""}
+        {totalCharts ? (
+          ""
+        ) : (
+          <div className="no-data">
+            <p>You haven't added any chart yet.</p>
+            <Link to="/addchart">Add Now + </Link>
+          </div>
+        )}
       </div>
-      <Pagination
-        postsPerPage={postsPerPage}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        totalPosts={dataList.length}
-        paginate={paginate}
-      />
+      {dataList && !chartFilter ? (
+        <Pagination
+          postsPerPage={postsPerPage}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          totalPosts={dataList.length}
+          paginate={paginate}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

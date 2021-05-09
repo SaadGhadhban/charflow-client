@@ -7,11 +7,12 @@ import { BiLogOut, BiBarChartAlt } from "react-icons/bi";
 import { MdDashboard } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { FiMenu } from "react-icons/fi";
+import logo from "../../svg/final-2.png";
 
 function HeaderScreen() {
   let history = useHistory;
 
-  const { privateData, setPrivateData, error, setError } = useUserContext();
+  const { privateData, setPrivateData } = useUserContext();
 
   const [show, setShow] = useState(false);
 
@@ -51,7 +52,7 @@ function HeaderScreen() {
   return (
     <div className="header-main-container">
       <div className="logo-container">
-        <h1>Logo</h1>
+        <img className="chart-logo" src={logo} alt="LOGO" />
       </div>
 
       <div className={`register-container ${privateData ? "auth" : ""}`}>

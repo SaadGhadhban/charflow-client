@@ -20,7 +20,7 @@ const MainScreen = ({ history }) => {
   const [doughnutCharts, setDoughnutCharts] = useState([]);
   const [radarCharts, setRadarCharts] = useState([]);
   const [polarCharts, setPolarCharts] = useState([]);
-  const [numberOfData, setNumberOfData] = useState(10);
+
   const [chartFilter, setChartFilter] = useState("");
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -286,7 +286,7 @@ const MainScreen = ({ history }) => {
                 }
                 if (chartFilter === chart && chart === "Doughnut") {
                   return (
-                    <div className="chart-c">
+                    <div key={v4()} className="chart-c">
                       <div key={v4()} className="pieChart">
                         <Doughnut
                           data={{
@@ -399,7 +399,7 @@ const MainScreen = ({ history }) => {
                 }
                 if (chartFilter === chart && chart === "Line") {
                   return (
-                    <div className="chart-c">
+                    <div key={v4()} className="chart-c">
                       <div key={v4()} className="pieChart">
                         <Line
                           data={{
@@ -494,7 +494,7 @@ const MainScreen = ({ history }) => {
                 }
                 if (chartFilter === chart && chart === "Radar") {
                   return (
-                    <div className="chart-c">
+                    <div key={v4()} className="chart-c">
                       <div key={v4()} className="pieChart">
                         <Radar
                           data={{
@@ -609,7 +609,7 @@ const MainScreen = ({ history }) => {
                 }
                 if (chartFilter === chart && chart === "Polar") {
                   return (
-                    <div className="chart-c">
+                    <div key={v4()} className="chart-c">
                       <div key={v4()} className="pieChart">
                         <Polar
                           data={{
@@ -855,7 +855,7 @@ const MainScreen = ({ history }) => {
                 }
                 if (chart === "Doughnut") {
                   return (
-                    <div className="chart-c">
+                    <div key={v4()} className="chart-c">
                       <div key={v4()} className="pieChart">
                         <Doughnut
                           data={{
@@ -968,7 +968,7 @@ const MainScreen = ({ history }) => {
                 }
                 if (chart === "Line") {
                   return (
-                    <div className="chart-c">
+                    <div key={v4()} className="chart-c">
                       <div key={v4()} className="pieChart">
                         <Line
                           data={{
@@ -1063,7 +1063,7 @@ const MainScreen = ({ history }) => {
                 }
                 if (chart === "Radar") {
                   return (
-                    <div className="chart-c">
+                    <div key={v4()} className="chart-c">
                       <div key={v4()} className="pieChart">
                         <Radar
                           data={{
@@ -1178,7 +1178,7 @@ const MainScreen = ({ history }) => {
                 }
                 if (chart === "Polar") {
                   return (
-                    <div className="chart-c">
+                    <div key={v4()} className="chart-c">
                       <div key={v4()} className="pieChart">
                         <Polar
                           data={{

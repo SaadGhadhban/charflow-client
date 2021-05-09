@@ -45,7 +45,7 @@ function ContactScreen() {
           <span className="success-span">{success}</span>
         ) : (
           <form onSubmit={handleContact} className="login-screen__form">
-            <h3 className="contact-screen__title">Contact</h3>
+            <h3 className="contact-screen__title">Contact the developer</h3>
             {error ? <span className="error-message">{error}</span> : ""}
             <div className="form-group">
               <label htmlFor="name">Your Name </label>

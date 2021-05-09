@@ -89,10 +89,45 @@ body {
     
 }
 
-
+.no-data{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.no-data > p {
+    color: rgb(158, 158, 158);
+    font-size: 19px;
+    font-style: oblique;
+}
+.delete-button{
+    margin-right: auto;
+    margin-left: 10px;
+    cursor: pointer;
+    
+}
+.no-data > a {
+    background-color: rgb(199, 199, 199);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    border-radius: 5px;
+    border-bottom: 3px solid #e76f51;
+}
+.no-data > a:hover {
+    background-color: rgb(172, 172, 172);
+}
+.delete-button > a {
+    color: crimson;
+    font-weight: bold;
+}
 
 .futter-icon {
     color: rgb(151, 151, 151);
+    margin-top: 5px;
     margin-right: 10px;
     margin-left: 10px;
 }

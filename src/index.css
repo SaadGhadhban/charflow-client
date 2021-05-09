@@ -464,6 +464,22 @@ textarea:focus {
     font-size: 14px;
     font-weight: normal;
   }
+  .chart-logo {
+    width: 200px;
+  }
+  .register-container {
+    margin-right: 10px;
+  }
+  .logo-container {
+    margin-left: 10px;
+  }
+
+  .chart-logo {
+    width: 110px;
+  }
+  .username-header {
+    font-size: 18px;
+  }
 }
 .test {
   width: 100px;
