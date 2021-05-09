@@ -28,7 +28,10 @@ function HeaderScreen() {
       };
 
       try {
-        const { data } = await axios.get("/api/private", config);
+        const { data } = await axios.get(
+          "https://agile-fjord-24980.herokuapp.com/api/private",
+          config
+        );
 
         setPrivateData(data.data.username);
       } catch (error) {

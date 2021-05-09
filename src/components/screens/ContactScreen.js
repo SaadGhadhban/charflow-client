@@ -21,7 +21,7 @@ function ContactScreen() {
 
     const handleAcync = async () => {
       const { data } = await axios.post(
-        "/api/auth/contact",
+        "https://agile-fjord-24980.herokuapp.com/api/auth/contact",
         { message, email, name },
         config
       );

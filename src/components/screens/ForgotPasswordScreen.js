@@ -19,7 +19,7 @@ const ForgotPasswordScreen = () => {
 
     const handleAcync = async () => {
       const { data } = await axios.post(
-        "/api/auth/forgotpassword",
+        "https://agile-fjord-24980.herokuapp.com/api/auth/forgotpassword",
         { email },
         config
       );

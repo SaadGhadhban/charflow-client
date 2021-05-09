@@ -72,7 +72,10 @@ const MainScreen = ({ history }) => {
       };
 
       try {
-        const { data } = await axios.get("/api/auth/main", config);
+        const { data } = await axios.get(
+          "https://agile-fjord-24980.herokuapp.com/api/auth/main",
+          config
+        );
 
         if (data.data) {
           setDataList(data.data.reverse());
@@ -98,7 +101,10 @@ const MainScreen = ({ history }) => {
         setRadarCharts([]);
         setPolarCharts([]);
 
-        const { data } = await axios.get("/api/auth/main", config);
+        const { data } = await axios.get(
+          "https://agile-fjord-24980.herokuapp.com/api/auth/main",
+          config
+        );
 
         setDataList(data.data.reverse());
 

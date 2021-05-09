@@ -29,7 +29,7 @@ const ResetPasswordScreen = ({ match }) => {
 
     const handleAcync = async () => {
       const { data } = await axios.put(
-        `/api/auth/resetpassword/${match.params.resetToken}`,
+        `https://agile-fjord-24980.herokuapp.com/api/auth/resetpassword/${match.params.resetToken}`,
         { password },
         config
       );

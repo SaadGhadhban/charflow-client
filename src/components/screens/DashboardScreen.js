@@ -88,7 +88,10 @@ const MainScreen = ({ history }) => {
         setDoughnutCharts([]);
         setRadarCharts([]);
         setPolarCharts([]);
-        const { data } = await axios.get("/api/private/privatecharts", config);
+        const { data } = await axios.get(
+          "https://agile-fjord-24980.herokuapp.com/api/private/privatecharts",
+          config
+        );
 
         if (data.data) {
           setDataList(data.data.usercharts.charts.reverse());
@@ -117,7 +120,10 @@ const MainScreen = ({ history }) => {
         setRadarCharts([]);
         setPolarCharts([]);
 
-        const { data } = await axios.get("/api/private/privatecharts", config);
+        const { data } = await axios.get(
+          "https://agile-fjord-24980.herokuapp.com/api/private/privatecharts",
+          config
+        );
 
         setDataList(data.data.usercharts.charts.reverse());
         countCharts(data.data.usercharts.charts);
@@ -141,7 +147,7 @@ const MainScreen = ({ history }) => {
 
       try {
         const { data } = await axios.patch(
-          "/api/private/deletecharts",
+          "https://agile-fjord-24980.herokuapp.com/api/private/deletecharts",
           { id, chart },
           config
         );

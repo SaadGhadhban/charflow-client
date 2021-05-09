@@ -35,7 +35,11 @@ export const AppProvider = ({children}) =>{
             const handleAcync = async() =>{
                 try{
             
-            const {data} = await axios.post('/api/auth/register',{username,email,password},config)
+            const { data } = await axios.post(
+              "https://agile-fjord-24980.herokuapp.com/api/auth/register",
+              { username, email, password },
+              config
+            );
             
             localStorage.setItem('authToken',data.token)
             setPrivateData(data.user)
@@ -65,7 +69,11 @@ export const AppProvider = ({children}) =>{
 
         const handleAcync = async() =>{
             try {
-            const {data} = await axios.post('/api/auth/login',{email,password},config)
+            const { data } = await axios.post(
+              "https://agile-fjord-24980.herokuapp.com/api/auth/login",
+              { email, password },
+              config
+            );
             
             localStorage.setItem('authToken',data.token)
             setPrivateData(data.user)
