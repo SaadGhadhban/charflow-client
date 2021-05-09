@@ -342,9 +342,10 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
-                        
                       </div>
                     </div>
                   );
@@ -468,7 +469,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -575,7 +578,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -702,7 +707,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -829,7 +836,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -972,7 +981,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1097,7 +1108,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1204,7 +1217,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1331,7 +1346,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1458,7 +1475,9 @@ const MainScreen = ({ history }) => {
                           className="delete-button"
                           onClick={() => chartDelete(_id, chart)}
                         >
-                          <a href="/dashboard">X</a>
+                          <a href="https://practical-raman-009cb0.netlify.app/dashboard">
+                            X
+                          </a>
                         </div>
                       </div>
                     </div>
