@@ -509,3 +509,9 @@ textarea:focus {
 .checkbox:checked {
   background: #e76f51;
 }
+
+.github {
+  
+  color: #d1d1d1;
+  margin-left: 25px;
+}

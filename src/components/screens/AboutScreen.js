@@ -39,8 +39,8 @@ function AboutScreen() {
           <Link to="/contact" className="contact-dev">
             Contact the Developer
           </Link>
-          <a href="https://github.com/SaadGhadhban">
-            <AiFillGithub />
+          <a className="github" href="https://github.com/SaadGhadhban">
+            <AiFillGithub size="1.4em" />
           </a>
         </div>
 
