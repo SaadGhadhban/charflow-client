@@ -168,6 +168,8 @@ a:focus {
   font-family: 'Courgette', cursive;
   height: 23px;
   border-bottom: solid 2px #e76f51 ;
+  font-size: 14px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
